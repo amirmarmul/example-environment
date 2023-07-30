@@ -13,11 +13,11 @@ spec:
         app: example-application
     spec:
       containers:
-      - name: example-application
-        image: kacestudio/example-application
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+      - image: amirmarmul/example-application:refs/tags/v1.3
+        name: example-application
         ports:
         - containerPort: 8080
+        resources:
+          limits:
+            cpu: 500m
+            memory: 128Mi
